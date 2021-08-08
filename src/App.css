@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-divider {
+  position: relative;
+  min-width: 600px;
+  max-width: 600px;
+  background-color: #979797;
+  display: inline-block;
+  margin: 0 0.25%;
 }
