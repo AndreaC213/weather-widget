@@ -1,8 +1,7 @@
-# **Weather Widge**
+# **Weather Widget**
 
 ### **1. The Challenge**
 The goal of this first part is to build a pixel-perfect weather widget using a publically available API. 
-**/events**
 
 Technology:
 * React
