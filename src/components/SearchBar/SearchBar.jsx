@@ -18,7 +18,9 @@ const SearchBar = ({ handleZipCodeChange, setZipCode, zipCode, errMsg }) => {
         <box className={'Search-bar-form-container'}>
           <div className={'Search-bar-input-container'}>
             <input
-              className={'Search-bar-input'}
+              className={
+                errMsg !== '' ? 'Search-bar-input-error' : 'Search-bar-input'
+              }
               value={zipCode}
               type='text'
               onChange={(e) => setZipCode(e.target.value)}
@@ -34,8 +36,7 @@ const SearchBar = ({ handleZipCodeChange, setZipCode, zipCode, errMsg }) => {
             </button>
           </div>
         </box>
-
-        <p className={'Search-bar-label'}>{errMsg ? `${errMsg}` : null}</p>
+        <p className={'Search-bar-error'}>{errMsg ? `${errMsg}` : null}</p>
       </form>
     </box>
   )

@@ -28,8 +28,8 @@ function App() {
       today['cityName'] = name
       today['weatherDescription'] = weather[0].description
       today['temp'] = ((main.feels_like * 9) / 5 - 459.67).toFixed(0)
-      today['tempMin'] = ((main.temp_max * 9) / 5 - 459.67).toFixed(0)
-      today['tempMax'] = ((main.temp_min * 9) / 5 - 459.67).toFixed(0)
+      today['tempMin'] = ((main.temp_min * 9) / 5 - 459.67).toFixed(0)
+      today['tempMax'] = ((main.temp_max * 9) / 5 - 459.67).toFixed(0)
       today['icon'] = weather[0].icon
 
       setData(today)

@@ -28,7 +28,7 @@
   width: 80px;
   height: 18px;
   color: #494949;
-  font-family: 'Gill Sans ', sans-serif;
+  font-family: 'Open Sans Blod', sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -46,6 +46,15 @@
   background-color: #ffffff;
 }
 
+.Search-bar-input-error {
+  width: 108px;
+  height: 36px;
+  box-shadow: inset 0 1px 3px rgba(256, 0, 0, 0.2);
+  border-radius: 3px;
+  border: 1px solid red;
+  background-color: #ffffff;
+}
+
 .Search-bar-button {
   width: 145px;
   height: 36px;
@@ -55,11 +64,23 @@
   background-image: linear-gradient(180deg, #d8d8d8 0%, #b3b3b3 100%);
   text-shadow: 0 1px 0 #ffffff;
   color: #4a4a4a;
-  font-family: 'Gill Sans Bold', sans-serif;
+  font-family: 'Open Sans Blod', sans-serif;
   font-size: 14px;
   font-weight: 700;
   font-style: normal;
   letter-spacing: normal;
   line-height: normal;
   text-align: center;
+}
+
+.Search-bar-error {
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  margin-left: 76px;
 }
