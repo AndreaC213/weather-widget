@@ -17,4 +17,4 @@ https://api.openweathermap.org/data/2.5/weather?zip=10036,us&appid=00ab9760d6984
 
 
 ### **2. Result**
-
+https://user-images.githubusercontent.com/56313933/128638077-22d6ffe9-5142-461a-a5f3-e6a6ccebcb22.mov
