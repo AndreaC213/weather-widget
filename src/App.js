@@ -7,10 +7,7 @@ import { fetchToday } from './api'
 function App() {
   const [data, setData] = useState(null)
   const [zipCode, setZipCode] = useState('')
-  const [zipError, setZipError] = useState(false)
   const [errMsg, setErrMsg] = useState('')
-
-  const [loading, setLoading] = useState(true)
 
   const handleZipCodeChange = async (e) => {
     try {
@@ -34,21 +31,12 @@ function App() {
 
       setData(today)
       setErrMsg('')
-      setZipCode('')
     } catch (err) {
-      // if (error.response) {
-      //   alert(error.response.message)
-      //   // setErrMsg(err.response.message)
-      // }
-      // alert(err.response.data.message)
       setErrMsg(err.response.data.message)
       setData(null)
       // console.error(error)
-      // setLoading(false)
     }
   }
-
-  // console.log(data)
 
   return (
     <div className='App'>

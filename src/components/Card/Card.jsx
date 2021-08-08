@@ -2,10 +2,7 @@ import React from 'react'
 import './Card.css'
 
 const Card = ({ data }) => {
-  // If weather data is not valid
-  console.log('data', data)
-  // Return grid with card components
-
+  // Capitalize each wrod in description
   const CapitalizeEachWord = (data) => {
     if (data) {
       const arr = data.weatherDescription.split(' ')
@@ -26,29 +23,30 @@ const Card = ({ data }) => {
     weatherDescription: "clear sky" */
   return (
     <div className={'Card-container'}>
-      <box className={'Card-city-container'}>
+      <div className={'Card-city-container'}>
         <div className={'Card-city-name'}>
           {data && data.cityName}
           {data && (
             <img
               className={'Card-icon'}
               src={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
+              alt=''
             />
           )}
         </div>
-      </box>
+      </div>
 
       <div className={'Card-weather-description'}>
         {data && CapitalizeEachWord(data)}
       </div>
-      <box className={'Card-temp-container'}>
+      <div className={'Card-temp-container'}>
         <div className={'Card-temp'}>{data && `${data.temp}°`}</div>
-      </box>
+      </div>
 
-      <box className={'Card-temp-container'}>
+      <div className={'Card-temp-container'}>
         <div className={'Card-temp-min'}>{data && `${data.tempMin}°`}</div>
         <div className={'Card-temp-max'}>{data && `${data.tempMax}°`}</div>
-      </box>
+      </div>
     </div>
   )
 }
