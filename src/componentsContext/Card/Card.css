@@ -1,0 +1,97 @@
+.Card-container {
+  width: 418px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 55px;
+}
+
+.Card-city-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card-temp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card-city-name {
+  width: 'auto';
+  height: 54px;
+  color: #4a4a4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.Card-weather-description {
+  width: 418px;
+  height: 25px;
+  color: #4a4a4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.Card-temp {
+  width: 95px;
+  height: 75px;
+  color: #4a4a4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 65px;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding-top: 54px;
+}
+
+.Card-temp-min {
+  width: 27px;
+  height: 31px;
+  color: #4a4a4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding-top: 9px;
+  padding-right: 32px;
+}
+
+.Card-temp-max {
+  width: 40px;
+  height: 31px;
+  color: #4a4a4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  padding-top: 9px;
+}
