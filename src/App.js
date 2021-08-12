@@ -9,54 +9,51 @@ function App() {
   const [zipCode, setZipCode] = useState('')
   const [errMsg, setErrMsg] = useState('')
 
-  const handleZipCodeChange =
-    async (e) => {
-      try {
-        if (e) {
-          e.stopPropagation()
-          e.preventDefault()
-        }
-
-        let zip_code = zipCode
-        const data = await fetchToday(zip_code)
-        const { name, main, weather } = data
-
-        var today = {}
-
-        today['cityName'] = name
-        today['weatherDescription'] = weather[0].description
-        today['temp'] = ((main.feels_like * 9) / 5 - 459.67).toFixed(0)
-        today['tempMin'] = ((main.temp_min * 9) / 5 - 459.67).toFixed(0)
-        today['tempMax'] = ((main.temp_max * 9) / 5 - 459.67).toFixed(0)
-        today['icon'] = weather[0].icon
-
-        setData(today)
-        setErrMsg('')
-      } catch (err) {
-        if (err.response) {
-          setErrMsg(err.response.data.message)
-        }
-
-        setData(null)
-        // console.error(error)
+  const handleZipCodeChange = async (e) => {
+    try {
+      if (e) {
+        e.stopPropagation()
+        e.preventDefault()
       }
+
+      let zip_code = zipCode
+      const data = await fetchToday(zip_code)
+      const { name, main, weather } = data
+
+      var today = {}
+
+      today['cityName'] = name
+      today['weatherDescription'] = weather[0].description
+      today['temp'] = ((main.feels_like * 9) / 5 - 459.67).toFixed(0)
+      today['tempMin'] = ((main.temp_min * 9) / 5 - 459.67).toFixed(0)
+      today['tempMax'] = ((main.temp_max * 9) / 5 - 459.67).toFixed(0)
+      today['icon'] = weather[0].icon
+
+      setData(today)
+      setErrMsg('')
+    } catch (err) {
+      if (err.response) {
+        setErrMsg(err.response.data.message)
+      }
+
+      setData(null)
+      // console.error(error)
     }
+  }
 
   return (
-
-      <div className='App'>
-        <header className='App-header'>
-          <Card data={data} />
-          <hr className={'App-divider'}></hr>
-          <SearchBar
-            handleZipCodeChange={handleZipCodeChange}
-            setZipCode={setZipCode}
-            zipCode={zipCode}
-            errMsg={errMsg}
-          />
-        </header>
-      </div>
-
+    <div className='App'>
+      <header className='App-header'>
+        <Card data={data} />
+        <hr className={'App-divider'}></hr>
+        <SearchBar
+          handleZipCodeChange={handleZipCodeChange}
+          setZipCode={setZipCode}
+          zipCode={zipCode}
+          errMsg={errMsg}
+        />
+      </header>
+    </div>
   )
 }
 
@@ -161,45 +158,7 @@ import { Provider } from 'react-redux'
 import store from './store'
 import { Card, SearchBar } from './componentsRedux'
 
-// import { fetchToday } from './api'
-
 function App() {
-  // const [data, setData] = useState(null)
-  // const [zipCode, setZipCode] = useState('')
-  // const [errMsg, setErrMsg] = useState('')
-
-  // const handleZipCodeChange = async (e) => {
-  //   try {
-  //     if (e) {
-  //       e.stopPropagation()
-  //       e.preventDefault()
-  //     }
-
-  //     let zip_code = zipCode
-  //     const data = await fetchToday(zip_code)
-  //     const { name, main, weather } = data
-
-  //     var today = {}
-
-  //     today['cityName'] = name
-  //     today['weatherDescription'] = weather[0].description
-  //     today['temp'] = ((main.feels_like * 9) / 5 - 459.67).toFixed(0)
-  //     today['tempMin'] = ((main.temp_min * 9) / 5 - 459.67).toFixed(0)
-  //     today['tempMax'] = ((main.temp_max * 9) / 5 - 459.67).toFixed(0)
-  //     today['icon'] = weather[0].icon
-
-  //     setData(today)
-  //     setErrMsg('')
-  //   } catch (err) {
-  //     if (err.response) {
-  //       setErrMsg(err.response.data.message)
-  //     }
-
-  //     setData(null)
-  //     // console.error(error)
-  //   }
-  // }
-
   return (
     <Provider store={store}>
       <div className='App'>
